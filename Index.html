@@ -1,137 +1,163 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrimeLife Fitness Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrimeLife Fitness Club</title>
 
-  <style>
+<style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('gym-background.jpg') center/cover no-repeat fixed;
-      color: white;
-      animation: fadeIn 1.2s;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: url('gym-bg-1.jpg') center/cover fixed no-repeat;
+        color: white;
+        overflow-x: hidden;
+        animation: fadeIn 1.5s ease-in-out;
     }
 
+    /* Header Section */
     header {
-      text-align: left;
-      padding: 60px 40px;
-      background: rgba(0, 0, 0, 0.65);
-      position: relative;
-      overflow: hidden;
+        padding: 80px 20px;
+        text-align: center;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(4px);
+        position: relative;
+        animation: drop 1.5s ease;
     }
 
     h1 {
-      font-size: 55px;
-      font-weight: bold;
-      animation: glow 2s infinite alternate;
-      margin: 0;
+        font-size: 50px;
+        font-weight: 900;
+        color: #ff1a1a;
+        text-shadow: 0px 0px 20px red;
+        animation: glow 2s infinite alternate;
+        letter-spacing: 2px;
     }
 
-    .tagline {
-      font-size: 26px;
-      margin-top: 10px;
-      color: #ff4444;
-      animation: fadeInUp 1.5s;
+    .offer {
+        font-size: 26px;
+        background: #ff0000cc;
+        padding: 10px 25px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 10px;
+        animation: fadeUp 1.6s ease;
+        font-weight: 600;
     }
 
-    .model-photo {
-      position: absolute;
-      right: 30px;
-      bottom: 0;
-      width: 280px;
-      filter: drop-shadow(0 0 15px black);
-      animation: slideIn 1.2s;
+    /* Main Cards */
+    section {
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
     }
 
-    .section {
-      padding: 40px;
-      background: rgba(0, 0, 0, 0.75);
-      margin: 20px;
-      border-radius: 15px;
-      border: 2px solid #ff0000;
-      animation: fadeIn 1.5s;
+    .card {
+        background: rgba(0,0,0,0.7);
+        padding: 25px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        border: 1px solid #ff1a1a;
+        animation: fadeUp 1.5s ease;
     }
 
-    h2 {
-      color: #ff3333;
-      margin-bottom: 10px;
+    .title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #ff3333;
+        margin-bottom: 10px;
     }
 
+    ul { 
+        font-size: 20px; 
+        line-height: 32px;
+    }
+
+    /* Buttons Section */
     .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #ff2222;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
+        padding: 12px 25px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 10px;
+        border-radius: 8px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .whatsapp { background: #25D366; color: #000; }
+    .insta { background: #E4405F; color: white; }
+    .call { background: #ff1a1a; color: white; }
+
+    .btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0px 0px 15px white;
     }
 
     /* Animations */
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    @keyframes slideIn { from {transform: translateX(60px); opacity: 0;} to {transform: translateX(0); opacity: 1;} }
-    @keyframes fadeInUp { from {transform: translateY(30px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
-    @keyframes glow { 
-      from { text-shadow: 0 0 10px red; } 
-      to { text-shadow: 0 0 30px #ff4444; }
-    }
-  </style>
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes glow { from {text-shadow:0 0 5px red;} to {text-shadow:0 0 20px red;} }
+    @keyframes drop { from {transform:translateY(-60px);} to {transform:translateY(0);} }
 
+    /* Background Models*/
+    .model {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        width: 280px;
+        filter: drop-shadow(0 0 20px black);
+        animation: fadeIn 2s ease;
+    }
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>PrimeLife Fitness Club</h1>
-  <div class="tagline">Opening Soon</div>
-  <img src="model-photo.png" class="model-photo" alt="Fitness Model">
+    <h1>PrimeLife Fitness Club</h1>
+    <div class="offer">🔥 Opening Offer: First 50 Slots — 20% OFF 🔥</div>
+
+    <!-- Model Photo (replace model.png with your own image later) -->
+    <img src="model.png" class="model" alt="Fitness Model">
 </header>
 
+<section>
 
-<div class="section">
-  <h2>📍 Location</h2>
-  <p>1st Floor, Bank of Baroda, Near Railway Station, Igatpuri, Nashik - 422403</p>
-</div>
+    <div class="card">
+        <div class="title">📍 Location</div>
+        <p>1st Floor, Lunawat Tower, Bank of Baroda, Igatpuri — 422403</p>
+    </div>
 
-<div class="section">
-  <h2>👤 Owner</h2>
-  <p><b>Shubhan Dhakoliya</b></p>
-</div>
+    <div class="card">
+        <div class="title">📞 Contact</div>
+        <p><strong>Owner: Shubhan Dhakoliya</strong></p>
+        <p>Mobile: <a class="call btn" href="tel:8149636959">Call Now</a></p>
+    </div>
 
-<div class="section">
-  <h2>💪 Services</h2>
-  <ul>
-    <li>Weight Training</li>
-    <li>Cardio</li>
-    <li>Personal Training</li>
-    <li>Diet Consultation</li>
-  </ul>
-</div>
+    <div class="card">
+        <div class="title">💬 Connect With Us</div>
 
-<div class="section">
-  <h2>⏰ Timings</h2>
-  <p><b>Morning:</b> 7 AM – 10 AM</p>
-  <p><b>Evening:</b> 4 PM – 9 PM</p>
-  <p><b>Female Batch:</b> Add later</p>
-</div>
+        <a class="whatsapp btn" href="https://wa.me/8149636959" target="_blank">WhatsApp</a>
+        
+        <a class="insta btn" href="https://www.instagram.com/primelife_fitness_club_111?igsh=NXhuaTY1N2xpa3pz" target="_blank">Instagram</a>
+    </div>
 
-<div class="section">
-  <h2>💳 Membership Plans</h2>
-  <p>• Monthly – ₹1200</p>
-  <p>• Quarterly – ₹3000</p>
-  <p>• Half Yearly – ₹5500</p>
-  <p>• Yearly – ₹9000</p>
-  <a class="btn" href="#">Join Now</a>
-</div>
+    <div class="card">
+        <div class="title">💪 Special Features</div>
+        <ul>
+            <li>Personal Training</li>
+            <li>Cardio</li>
+            <li>CrossFit</li>
+            <li>Strength Training</li>
+            <li>Diet & Nutrition Guidance</li>
+            <li>Weight Training</li>
+        </ul>
+    </div>
 
-<div class="section">
-  <h2>📱 Connect With Us</h2>
-  <a class="btn" style="background:#25D366;" href="#">WhatsApp</a>
-  <a class="btn" style="background:#E4405F;" href="#">Instagram</a>
-  <a class="btn" style="background:#4285F4;" href="#">Google Map</a>
-</div>
+</section>
 
 </body>
 </html>
